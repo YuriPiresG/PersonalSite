@@ -16,15 +16,21 @@ function Layout() {
             Yuri's Portfolio
           </Text>
           <div style={{ marginLeft: "auto" }}>
-            <Button variant="subtle" color="gray" size="sm">
-              Home
-            </Button>
-            <Button variant="subtle" color="gray" size="sm">
-              Projects
-            </Button>
-            <Button variant="subtle" color="gray" size="sm">
-              Socials
-            </Button>
+            <Link to="/home">
+              <Button variant="subtle" color="gray" size="sm">
+                Home
+              </Button>
+            </Link>
+            <Link to="/projects">
+              <Button variant="subtle" color="gray" size="sm">
+                Projects
+              </Button>
+            </Link>
+            <Link to="/socials">
+              <Button variant="subtle" color="gray" size="sm">
+                Socials
+              </Button>
+            </Link>
           </div>
         </Header>
       }
