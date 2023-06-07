@@ -9,8 +9,11 @@ import {
   useMantineTheme,
   rem,
 } from "@mantine/core";
-import CoursePlanner from "../assets/coruja.png";
 import "../styles.css";
+import CoursePlanner from "../assets/coruja.png";
+import TodoApp from "../assets/logotodo.png";
+import playlistbuilder from "../assets/playlistbuilder.jpg";
+import portfolio from "../assets/portfolio.jpg";
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -44,9 +47,12 @@ interface CardProps {
   image: string;
   title: string;
   category: string;
+  front: string;
+  back: string;
+  demo: string;
 }
 
-function Card({ image, title, category }: CardProps) {
+function Card({ image, title, category, front, back, demo }: CardProps) {
   const { classes } = useStyles();
 
   return (
@@ -59,16 +65,57 @@ function Card({ image, title, category }: CardProps) {
         className={classes.card}
       >
         <div>
-          <Text className={classes.category} size="xs">
+          <Text
+            style={{ WebkitTextStroke: "0.5px black" }}
+            className={classes.category}
+            size="xs"
+          >
             {category}
           </Text>
-          <Title order={3} className={classes.title}>
+          <Title
+            c="white"
+            style={{ WebkitTextStroke: "0.7px black" }}
+            order={3}
+            className={classes.title}
+          >
             {title}
           </Title>
         </div>
-        <Button variant="white" color="dark">
-          Read article
-        </Button>
+        <div
+          style={{
+            display: "flex",
+          }}
+        >
+          {demo && (
+            <Button
+              style={{ marginRight: "1rem" }}
+              variant="white"
+              color="dark"
+              onClick={() => window.open(demo)}
+            >
+              Demo
+            </Button>
+          )}
+          {front && (
+            <Button
+              style={{ marginRight: "1rem" }}
+              variant="white"
+              color="dark"
+              onClick={() => window.open(front)}
+            >
+              Front
+            </Button>
+          )}
+          {back && (
+            <Button
+              variant="white"
+              color="dark"
+              onClick={() => window.open(back)}
+            >
+              Back
+            </Button>
+          )}
+        </div>
       </Paper>
     </div>
   );
@@ -79,36 +126,35 @@ const data = [
     image: CoursePlanner,
     title: "Course Planner",
     category: "Fullstack",
+    front:
+      "https://github.com/YuriPiresG/front-end-gestao-facul/tree/master/estud",
+    back: "https://github.com/YuriPiresG/proj-gestao-facul",
+    demo: "https://front-end-gestao-facul.vercel.app",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Hawaii beaches review: better than you think",
-    category: "beach",
+    image: TodoApp,
+    title: "Todo App",
+    category: "Fullstack",
+    front: "https://github.com/YuriPiresG/TodoClient",
+    back: "https://github.com/YuriPiresG/todoServer",
+    demo: "https://todo-client-hf88.vercel.app/?",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Mountains at night: 12 best locations to enjoy the view",
-    category: "nature",
+    image: playlistbuilder,
+    title: "Playlist Builder",
+    category: "Frontend",
+    front: "https://github.com/YuriPiresG",
+    back: "",
+    demo: "https://playlist-builder-client.vercel.app",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Aurora in Norway: when to visit for best experience",
-    category: "nature",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Best places to visit this winter",
-    category: "tourism",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1582721478779-0ae163c05a60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Active volcanos reviews: travel at your own risk",
-    category: "nature",
+    image: portfolio,
+    title: "Yuri's Portfolio",
+    category: "Frontend",
+    front:
+      "https://github.com/YuriPiresG/PersonalSite/tree/master/personalSite",
+    back: "",
+    demo: "https://playlist-builder-client.vercel.app",
   },
 ];
 
@@ -122,15 +168,34 @@ function Projects() {
   ));
 
   return (
-    <Carousel
-      slideSize="30%"
-      breakpoints={[{ maxWidth: "sm", slideSize: "100%", slideGap: 2 }]}
-      slideGap="xl"
-      align="start"
-      slidesToScroll={mobile ? 1 : 2}
-    >
-      {slides}
-    </Carousel>
+    <>
+      <Carousel
+        slideSize="50%"
+        breakpoints={[{ maxWidth: "lg", slideSize: "100%", slideGap: 2 }]}
+        slideGap="xl"
+        align="start"
+        loop
+      >
+        {slides}
+      </Carousel>{" "}
+      <br />
+      <div className="card">
+        <Title style={{ marginLeft: "1rem" }} order={2}>
+          Aba de projetos
+        </Title>{" "}
+        <br />
+        <Paper shadow="xl" radius="xl" p="xl" withBorder>
+          <Text size="lg">
+            Aqui você pode ver alguns dos meus projetos, tanto pessoais quanto
+            acadêmicos.
+          </Text>
+          <Text size="lg">
+            Todos os projetos estão disponíveis no meu github e alguns deles
+            estão hospedados no Vercel.
+          </Text>
+        </Paper>
+      </div>
+    </>
   );
 }
 export default Projects;
