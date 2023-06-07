@@ -16,15 +16,18 @@ import linkedin from "../assets/linkedin.png";
 import spotify from "../assets/spotify.png";
 import steam from "../assets/steam.png";
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "@mantine/hooks";
 
 function Socials() {
+  const isMobile = useMediaQuery("(max-width: 500px)");
   return (
     <>
       <Title>Socials</Title>
       <div
         className="card"
         style={{
-          display: "grid",
+          display: isMobile ? "flex" : "grid",
+          flexDirection: isMobile ? "column" : "row",
           gridTemplateColumns: "repeat(3, 1fr)",
           gridGap: "1rem",
           justifyContent: "center",
@@ -144,7 +147,8 @@ function Socials() {
           </Group>
 
           <Text size="sm" color="dimmed">
-            Caso queira entrar em contato comigo, sinta-se a vontade para se conectar comigo no LinkedIn!
+            Caso queira entrar em contato comigo, sinta-se a vontade para se
+            conectar comigo no LinkedIn!
           </Text>
 
           <Link to="https://www.linkedin.com/in/yuripiresg1/">
@@ -186,7 +190,8 @@ function Socials() {
           </Group>
 
           <Text size="sm" color="dimmed">
-            Caso queira entrar em contato comigo, sinta-se a vontade para me mandar uma mensagem no Instagram!
+            Caso queira entrar em contato comigo, sinta-se a vontade para me
+            mandar uma mensagem no Instagram!
           </Text>
           <Link to="https://www.instagram.com/yuripirees/">
             <Button variant="light" color="blue" fullWidth mt="md" radius="md">
@@ -226,7 +231,8 @@ function Socials() {
           </Group>
 
           <Text size="sm" color="dimmed">
-           Se você busca algumas playlists de gosto duvidoso, sinta-se a vontade para me seguir no Spotify!
+            Se você busca algumas playlists de gosto duvidoso, sinta-se a
+            vontade para me seguir no Spotify!
           </Text>
 
           <Link to="https://open.spotify.com/user/12157163252">
@@ -267,7 +273,8 @@ function Socials() {
           </Group>
 
           <Text size="sm" color="dimmed">
-            Caso queira jogar algum jogo comigo, sinta-se a vontade para me adicionar na Steam!
+            Caso queira jogar algum jogo comigo, sinta-se a vontade para me
+            adicionar na Steam!
           </Text>
 
           <Link to="https://steamcommunity.com/id/FateYuri">
