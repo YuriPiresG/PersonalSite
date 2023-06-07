@@ -1,19 +1,17 @@
 import { Carousel } from "@mantine/carousel";
-import { useMediaQuery } from "@mantine/hooks";
 import {
-  createStyles,
-  Paper,
-  Text,
-  Title,
-  Button,
-  useMantineTheme,
-  rem,
+    Button,
+    Paper,
+    Text,
+    Title,
+    createStyles,
+    rem
 } from "@mantine/core";
-import "../styles.css";
 import CoursePlanner from "../assets/coruja.png";
 import TodoApp from "../assets/logotodo.png";
 import playlistbuilder from "../assets/playlistbuilder.jpg";
 import portfolio from "../assets/portfolio.jpg";
+import "../styles.css";
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -159,8 +157,6 @@ const data = [
 ];
 
 function Projects() {
-  const theme = useMantineTheme();
-  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
   const slides = data.map((item) => (
     <Carousel.Slide key={item.title}>
       <Card {...item} />

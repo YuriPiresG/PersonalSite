@@ -16,7 +16,7 @@ function Layout() {
             Yuri's Portfolio
           </Text>
           <div style={{ marginLeft: "auto" }}>
-            <Link to="/home">
+            <Link to="/">
               <Button variant="subtle" color="gray" size="sm">
                 Home
               </Button>

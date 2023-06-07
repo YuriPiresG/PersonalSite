@@ -3,19 +3,23 @@ import { MantineProvider } from "@mantine/core";
 import Layout from "./components/Layout";
 import HomeScreen from "./components/HomeScreen";
 import Projects from "./components/Projects";
+import Socials from "./components/Socials";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <Layout />,
     children: [
       {
-        path: "/home",
+        path: "/",
         element: <HomeScreen />,
       },
       {
         path: "/projects",
         element: <Projects />,
+      },
+      {
+        path: "/socials",
+        element: <Socials />,
       },
     ],
   },
