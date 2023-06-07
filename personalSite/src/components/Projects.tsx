@@ -152,7 +152,7 @@ const data = [
     front:
       "https://github.com/YuriPiresG/PersonalSite/tree/master/personalSite",
     back: "",
-    demo: "https://playlist-builder-client.vercel.app",
+    demo: "https://yuri-portfolio.vercel.app",
   },
 ];
 
