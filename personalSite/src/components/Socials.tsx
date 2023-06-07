@@ -10,7 +10,7 @@ import {
   Title,
 } from "@mantine/core";
 import github from "../assets/github.png";
-import gmail from "../assets/gmail.png";
+import gmail from "../assets/Gmail.png";
 import instagram from "../assets/instagram.png";
 import linkedin from "../assets/linkedin.png";
 import spotify from "../assets/spotify.png";
