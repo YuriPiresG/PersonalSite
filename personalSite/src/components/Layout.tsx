@@ -1,4 +1,5 @@
 import { AppShell, Button, Header, Text } from "@mantine/core";
+import { Link, Outlet } from "react-router-dom";
 
 function Layout() {
   return (
@@ -15,7 +16,7 @@ function Layout() {
             Yuri's Portfolio
           </Text>
           <div style={{ marginLeft: "auto" }}>
-            <Button variant="subtle" color="gray" size="sm" style={{}}>
+            <Button variant="subtle" color="gray" size="sm">
               Home
             </Button>
             <Button variant="subtle" color="gray" size="sm">
@@ -36,7 +37,7 @@ function Layout() {
         },
       })}
     >
-      {/* Your application here */}
+      <Outlet />
     </AppShell>
   );
 }

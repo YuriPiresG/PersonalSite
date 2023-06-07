@@ -1,0 +1,31 @@
+.card {
+  animation: fadeIn 1s ease-in;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.react-logo:hover {
+  animation: rotate 1.5s;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nest {
+  transition: all 0.2s ease-in-out;
+}
+.nest:hover {
+  transform: scale(1.5);
+}
