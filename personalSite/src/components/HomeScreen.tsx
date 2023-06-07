@@ -1,8 +1,8 @@
-import { Card, Image, Text, Badge, Button, Group } from "@mantine/core";
-import me from "../assets/me.jpg";
+import { Paper, Card, Group, Image, Text } from "@mantine/core";
 import NestJSLogo from "../assets/NestJS.svg.png";
-import TypeScriptLogo from "../assets/typescript.png";
 import ReactLogo from "../assets/React-icon.svg.png";
+import me from "../assets/me.jpg";
+import TypeScriptLogo from "../assets/typescript.png";
 import "../styles.css";
 
 function HomeScreen() {
@@ -11,8 +11,8 @@ function HomeScreen() {
       <div style={{ display: "flex" }} className="card">
         <Card
           shadow="sm"
-          padding="lg"
-          radius="lg"
+          padding="sm"
+          radius="xl"
           withBorder
           style={{ width: "30%" }}
         >
@@ -21,10 +21,12 @@ function HomeScreen() {
           </Card.Section>
 
           <Group position="apart" mt="md" mb="xs">
-            <Text weight={500}>Yuri Pires Gonçalves</Text>
+            <Text weight={700} size="xl">
+              Yuri Pires Gonçalves
+            </Text>
           </Group>
 
-          <Text size="sm" color="dimmed">
+          <Text size="lg" color="dimmed">
             Estudante de Análise e Desenvolvimento de Sistemas, com habilidades
             em Python, Java, JavaScript, TypeScript, React, NestJs, HTML e CSS.
             Tenho experiência em integração de APIs e desenvolvimento de APIs
@@ -36,34 +38,93 @@ function HomeScreen() {
         <div
           style={{
             display: "flex",
-            marginLeft: "20%",
+            marginLeft: "10%",
             flexDirection: "column",
-            alignContent: "center",
-            justifyContent: "center",
           }}
         >
-          <h1 style={{ marginLeft: "40%" }}>Tecnologias</h1>
+          <h1 style={{ marginLeft: "30%" }}>Tecnologias que utilizo:</h1>
           <div style={{ display: "flex" }}>
             <Image
               src={NestJSLogo}
-              className="nest"
-              height={"20vh"}
+              className="grow"
               alt="Norway"
-              style={{ padding: "2rem" }}
+              style={{ width: "20rem", padding: "2rem" }}
+              onClick={() => {
+                window.open("https://docs.nestjs.com/");
+              }}
             />
             <Image
               src={ReactLogo}
-              className="react-logo"
-              height={"20vh"}
+              className="grow"
               alt="Norway"
-              style={{ padding: "2rem 1rem 2rem"}}
+              style={{ width: "20rem", padding: "2rem" }}
+              onClick={() => {
+                window.open("https://react.dev/");
+              }}
             />
             <Image
               src={TypeScriptLogo}
-              height={"20vh"}
+              className="grow"
               alt="Norway"
-              style={{ padding: "2rem" }}
+              style={{ width: "20rem", padding: "2rem" }}
+              onClick={() => {
+                window.open("https://www.typescriptlang.org/");
+              }}
             />
+          </div>
+          <div style={{marginTop:'5rem'}}>
+          <h1 style={{ marginLeft: "30%" }}>Um pouco mais sobre o Yuri:</h1>
+          <Paper shadow="xl" radius="xl" p="xl" withBorder>
+            <Text>
+              Vou utilizar esse espaço para contar um pouco mais sobre como sou
+              e do que gosto.
+            </Text>
+            <Text>
+              Atualmente tenho 22 anos, moro no interior de São Paulo.
+            </Text>
+            <Text>
+              Sou apaixonado por tecnologia e por resolver problemas complexos.
+            </Text>
+            <Text>
+              Também gosto muito de gatos, jogos, mangás, animes e filmes.
+            </Text>
+            <Text>
+              Tenho um gosto eclético em relação a música, mas gosto muito de
+              indie e músicas mais calmas.
+            </Text>
+            <Text>
+              No momento já li alguns mangás mais famosos, estou indo para
+              Vinland Saga. Meu{" "}
+              <Text
+                span
+                component="a"
+                href="https://myanimelist.net/profile/IsiliathPires"
+                c="blue"
+              >
+                M.A.L.
+              </Text>
+            </Text>
+            <Text>
+              Meus jogos favoritos são:{" "}
+              <Text span c="red">
+                Valorant
+              </Text>
+              ,{" "}
+              <Text
+                span
+                variant="gradient"
+                gradient={{
+                  from: "gold",
+                  to: "red",
+                  deg: 135,
+                }}
+                inherit
+              >
+                Persona 4 e 5
+              </Text>
+             , também sou fã de Rouguelikes em geral.
+            </Text>
+          </Paper>
           </div>
         </div>
       </div>

@@ -12,6 +12,7 @@
 
 .react-logo:hover {
   animation: rotate 1.5s;
+  cursor: pointer;
 }
 
 @keyframes rotate {
@@ -23,9 +24,10 @@
   }
 }
 
-.nest {
+.grow {
   transition: all 0.2s ease-in-out;
 }
-.nest:hover {
+.grow:hover {
   transform: scale(1.5);
+  cursor: pointer;
 }
