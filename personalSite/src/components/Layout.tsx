@@ -23,7 +23,7 @@ function Layout() {
             </Link>
             <Link to="/projects">
               <Button variant="subtle" color="gray" size="sm">
-                Projects
+                Projetos
               </Button>
             </Link>
             <Link to="/socials">
