@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { MantineProvider } from "@mantine/core";
 import Layout from "./components/Layout";
 import HomeScreen from "./components/HomeScreen";
+import Projects from "./components/Projects";
 
 const router = createBrowserRouter([
   {
@@ -9,8 +10,12 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: "/home", // Add forward slash before "home"
+        path: "/home",
         element: <HomeScreen />,
+      },
+      {
+        path: "/projects",
+        element: <Projects />,
       },
     ],
   },

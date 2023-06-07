@@ -10,20 +10,6 @@
   }
 }
 
-.react-logo:hover {
-  animation: rotate 1.5s;
-  cursor: pointer;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .grow {
   transition: all 0.2s ease-in-out;
 }
