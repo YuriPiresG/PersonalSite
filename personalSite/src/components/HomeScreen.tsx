@@ -36,12 +36,11 @@ function HomeScreen() {
           </Group>
 
           <Text size="lg" color="dimmed">
-            Estudante de Análise e Desenvolvimento de Sistemas, com habilidades
-            em Python, Java, JavaScript, TypeScript, React, NestJs, HTML e CSS.
-            Tenho experiência em integração de APIs e desenvolvimento de APIs
-            REST. Sou autodidata, proativo e apaixonado por resolver problemas
-            complexos. Busco oportunidades para aplicar meus conhecimentos e
-            crescer como desenvolvedor de software.
+            Olá, me chamo Yuri! Sou estudante de Análise e Desenvolvimento de
+            Sistemas, com habilidades em TypeScript, Java, HTML, CSS, React,
+            NodeJs, NestJs e SQL. Tenho experiência em integração e
+            desenvolvimento de APIs. Busco oportunidades para aplicar meus
+            conhecimentos e crescer como desenvolvedor fullstack.
           </Text>
         </Card>
         <div

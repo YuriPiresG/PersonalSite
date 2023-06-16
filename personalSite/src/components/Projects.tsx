@@ -1,12 +1,5 @@
 import { Carousel } from "@mantine/carousel";
-import {
-    Button,
-    Paper,
-    Text,
-    Title,
-    createStyles,
-    rem
-} from "@mantine/core";
+import { Button, Paper, Text, Title, createStyles, rem } from "@mantine/core";
 import CoursePlanner from "../assets/coruja.png";
 import TodoApp from "../assets/logotodo.png";
 import playlistbuilder from "../assets/playlistbuilder.jpg";
@@ -188,6 +181,10 @@ function Projects() {
           <Text size="lg">
             Todos os projetos estão disponíveis no meu github e alguns deles
             estão hospedados no Vercel.
+          </Text>
+          <Text size="lg">
+            Atualmente o back end está hospedado em um ambiente "free", portanto
+            está sujeito a cair caso acabe o tempo de uso.
           </Text>
         </Paper>
       </div>
