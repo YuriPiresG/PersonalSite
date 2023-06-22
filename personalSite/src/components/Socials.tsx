@@ -111,7 +111,7 @@ function Socials() {
           </Text>
           <Link to="https://github.com/YuriPiresG">
             <Button variant="light" color="blue" fullWidth mt="md" radius="md">
-              Acesse meus repositórios.
+              Acesse meus repositórios
             </Button>
           </Link>
         </Card>
