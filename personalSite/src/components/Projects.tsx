@@ -2,6 +2,7 @@ import { Carousel } from "@mantine/carousel";
 import { Button, Paper, Text, Title, createStyles, rem } from "@mantine/core";
 import CoursePlanner from "../assets/coruja.png";
 import TodoApp from "../assets/logotodo.png";
+import HospedaEventos from "../assets/hospeda.png";
 import playlistbuilder from "../assets/playlistbuilder.jpg";
 import portfolio from "../assets/portfolio.jpg";
 import "../styles.css";
@@ -121,6 +122,14 @@ const data = [
       "https://github.com/YuriPiresG/front-end-gestao-facul/tree/master/estud",
     back: "https://github.com/YuriPiresG/proj-gestao-facul",
     demo: "https://front-end-gestao-facul.vercel.app",
+  },
+  {
+    image: HospedaEventos,
+    title: "Hospeda Eventos",
+    category: "Fullstack",
+    front: "https://github.com/YuriPiresG/front-end-hospeda",
+    back: "https://github.com/YuriPiresG/back-end-hospeda",
+    demo: "https://front-end-hospeda.vercel.app",
   },
   {
     image: TodoApp,
