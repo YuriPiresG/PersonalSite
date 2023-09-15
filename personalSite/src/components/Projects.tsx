@@ -41,7 +41,7 @@ interface CardProps {
   category: string;
   front: string;
   back: string;
-  demo: string;
+  demo?: string;
 }
 
 function Card({ image, title, category, front, back, demo }: CardProps) {
@@ -121,7 +121,6 @@ const data = [
     front:
       "https://github.com/YuriPiresG/front-end-gestao-facul/tree/master/estud",
     back: "https://github.com/YuriPiresG/proj-gestao-facul",
-    demo: "https://front-end-gestao-facul.vercel.app",
   },
   {
     image: HospedaEventos,
@@ -129,7 +128,6 @@ const data = [
     category: "Fullstack",
     front: "https://github.com/YuriPiresG/front-end-hospeda",
     back: "https://github.com/YuriPiresG/back-end-hospeda",
-    demo: "https://front-end-hospeda.vercel.app",
   },
   {
     image: TodoApp,
@@ -137,7 +135,6 @@ const data = [
     category: "Fullstack",
     front: "https://github.com/YuriPiresG/TodoClient",
     back: "https://github.com/YuriPiresG/todoServer",
-    demo: "https://todo-client-hf88.vercel.app/?",
   },
   {
     image: playlistbuilder,
