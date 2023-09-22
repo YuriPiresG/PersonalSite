@@ -5,7 +5,7 @@ import TodoApp from "../assets/logotodo.png";
 import HospedaEventos from "../assets/hospeda.png";
 import playlistbuilder from "../assets/playlistbuilder.jpg";
 import portfolio from "../assets/portfolio.jpg";
-import timerIgnite from "../assets/timerIgnite.jpg";
+import timerIgnite from "../assets/timerIgnite.png";
 import "../styles.css";
 
 const useStyles = createStyles((theme) => ({
