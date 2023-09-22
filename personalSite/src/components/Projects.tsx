@@ -5,6 +5,7 @@ import TodoApp from "../assets/logotodo.png";
 import HospedaEventos from "../assets/hospeda.png";
 import playlistbuilder from "../assets/playlistbuilder.jpg";
 import portfolio from "../assets/portfolio.jpg";
+import timerIgnite from "../assets/timerIgnite.jpg";
 import "../styles.css";
 
 const useStyles = createStyles((theme) => ({
@@ -143,6 +144,14 @@ const data = [
     front: "https://github.com/YuriPiresG",
     back: "",
     demo: "https://playlist-builder-client.vercel.app",
+  },
+  {
+    image: timerIgnite,
+    title: "Ignite Timer",
+    category: "Frontend",
+    front: "https://github.com/YuriPiresG/timer-ignite",
+    back: "",
+    demo: "https://timer-ignite-eta.vercel.app",
   },
   {
     image: portfolio,
