@@ -124,6 +124,14 @@ const data = [
     back: "https://github.com/YuriPiresG/proj-gestao-facul",
   },
   {
+    image: timerIgnite,
+    title: "Ignite Timer",
+    category: "Frontend",
+    front: "https://github.com/YuriPiresG/timer-ignite",
+    back: "",
+    demo: "https://timer-ignite-eta.vercel.app",
+  },
+  {
     image: HospedaEventos,
     title: "Hospeda Eventos",
     category: "Fullstack",
@@ -144,14 +152,6 @@ const data = [
     front: "https://github.com/YuriPiresG",
     back: "",
     demo: "https://playlist-builder-client.vercel.app",
-  },
-  {
-    image: timerIgnite,
-    title: "Ignite Timer",
-    category: "Frontend",
-    front: "https://github.com/YuriPiresG/timer-ignite",
-    back: "",
-    demo: "https://timer-ignite-eta.vercel.app",
   },
   {
     image: portfolio,
